@@ -1,0 +1,12 @@
+[server]
+# Use 0.0.0.0 to make the app accessible on all network interfaces
+address = "0.0.0.0"
+port = 5000
+headless = true
+
+[theme]
+primaryColor = "#1E3A8A"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F8FAFC"
+textColor = "#262730"
+font = "sans serif"

@@ -1,0 +1,194 @@
+{
+    "guddu": {
+        "username": "guddu",
+        "password": "$2b$12$EMD6Sm6mGSmEfTJdeOce0OFpYINrS4.MNN/FkajLxvEHrwISipI2K",
+        "portfolio": [
+            {
+                "ticker": "RELIANCE",
+                "shares": 21.0,
+                "purchase_price": 1347.17
+            },
+            {
+                "ticker": "SBICARD",
+                "shares": 15.0,
+                "purchase_price": 734.26
+            },
+            {
+                "ticker": "TATAELXSI",
+                "shares": 1.0,
+                "purchase_price": 7194.0
+            },
+            {
+                "ticker": "TATAMOTORS",
+                "shares": 30.0,
+                "purchase_price": 816.88
+            },
+            {
+                "ticker": "TATAPOWER",
+                "shares": 61.0,
+                "purchase_price": 386.49
+            },
+            {
+                "ticker": "VBL",
+                "shares": 47.0,
+                "purchase_price": 545.87
+            },
+            {
+                "ticker": "JSWENERGY",
+                "shares": 8.0,
+                "purchase_price": 515.75
+            },
+            {
+                "ticker": "KAJARIACER",
+                "shares": 1.0,
+                "purchase_price": 944.05
+            },
+            {
+                "ticker": "KPITTECH",
+                "shares": 10.0,
+                "purchase_price": 1375.72
+            },
+            {
+                "ticker": "PIDILITIND",
+                "shares": 1.0,
+                "purchase_price": 2290.0
+            },
+            {
+                "ticker": "PRICOLLTD",
+                "shares": 24.0,
+                "purchase_price": 474.39
+            },
+            {
+                "ticker": "SAMMAANCAP",
+                "shares": 5.0,
+                "purchase_price": 221.55
+            },
+            {
+                "ticker": "IEX",
+                "shares": 12.0,
+                "purchase_price": 137.49
+            },
+            {
+                "ticker": "IRCTC",
+                "shares": 11.0,
+                "purchase_price": 807.76
+            },
+            {
+                "ticker": "ITC",
+                "shares": 8.0,
+                "purchase_price": 467.07
+            },
+            {
+                "ticker": "JIOFIN",
+                "shares": 30.0,
+                "purchase_price": 252.58
+            },
+            {
+                "ticker": "ASIANPAINT",
+                "shares": 4.0,
+                "purchase_price": 2945.05
+            },
+            {
+                "ticker": "ASTRAL",
+                "shares": 4.0,
+                "purchase_price": 1730.98
+            },
+            {
+                "ticker": "BATAINDIA",
+                "shares": 2.0,
+                "purchase_price": 1661.85
+            },
+            {
+                "ticker": "BRITANNIA",
+                "shares": 1.0,
+                "purchase_price": 4474.0
+            },
+            {
+                "ticker": "CDSL",
+                "shares": 20.0,
+                "purchase_price": 922.56
+            },
+            {
+                "ticker": "DMART",
+                "shares": 2.0,
+                "purchase_price": 3576.17
+            },
+            {
+                "ticker": "HAPPSTMNDS",
+                "shares": 5.0,
+                "purchase_price": 869.78
+            },
+            {
+                "ticker": "HDFCBANK",
+                "shares": 16.0,
+                "purchase_price": 1512.35
+            },
+            {
+                "ticker": "HINDUNILVR",
+                "shares": 5.0,
+                "purchase_price": 2260.43
+            }
+        ]
+    },
+    "buzzy": {
+        "username": "buzzy",
+        "password": "$2b$12$dC7i4qJW1WdJ1lLgFzWEuO8kFjLXbJ36tAa4mlscjop5BKXUCK66S",
+        "portfolio": [
+            {
+                "ticker": "BERGEPAINT",
+                "shares": 1.0,
+                "purchase_price": 724.0
+            },
+            {
+                "ticker": "BHARTIARTL",
+                "shares": 1.0,
+                "purchase_price": 740.0
+            },
+            {
+                "ticker": "CELEBRITY",
+                "shares": 2.0,
+                "purchase_price": 7.2
+            },
+            {
+                "ticker": "GAIL",
+                "shares": 1.0,
+                "purchase_price": 136.2
+            },
+            {
+                "ticker": "ONGC",
+                "shares": 2.0,
+                "purchase_price": 143.85
+            },
+            {
+                "ticker": "PNB",
+                "shares": 2.0,
+                "purchase_price": 36.95
+            },
+            {
+                "ticker": "SBIN",
+                "shares": 1.0,
+                "purchase_price": 426.15
+            },
+            {
+                "ticker": "TATAMOTORS",
+                "shares": 2.0,
+                "purchase_price": 315.1
+            },
+            {
+                "ticker": "TATAPOWER",
+                "shares": 2.0,
+                "purchase_price": 250.8
+            },
+            {
+                "ticker": "VCL",
+                "shares": 6.0,
+                "purchase_price": 3.52
+            },
+            {
+                "ticker": "YESBANK",
+                "shares": 3.0,
+                "purchase_price": 13.87
+            }
+        ]
+    }
+}
