@@ -299,4 +299,3 @@ elif st.session_state.page == "optimization":
     show_optimization()
 else:
     show_welcome()
-
