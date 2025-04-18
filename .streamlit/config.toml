@@ -1,7 +1,7 @@
 [server]
 # Use 0.0.0.0 to make the app accessible on all network interfaces
 address = "0.0.0.0"
-port = 5000
+port = 8501
 headless = true
 
 [theme]
