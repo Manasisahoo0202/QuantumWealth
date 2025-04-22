@@ -1,7 +1,7 @@
 {
     "guddu": {
         "username": "guddu",
-        "password": "$2b$12$EMD6Sm6mGSmEfTJdeOce0OFpYINrS4.MNN/FkajLxvEHrwISipI2K",
+        "password": "$2b$12$03TMqeD9YZTj7OGS3c1E4uNqR3lDvv.teliEAsv/N8.uBYmiuG7Yu",
         "portfolio": [
             {
                 "ticker": "RELIANCE",
@@ -128,7 +128,8 @@
                 "shares": 5.0,
                 "purchase_price": 2260.43
             }
-        ]
+        ],
+        "failed_login_attempts": []
     },
     "buzzy": {
         "username": "buzzy",
@@ -190,5 +191,10 @@
                 "purchase_price": 13.87
             }
         ]
+    },
+    "john doe": {
+        "username": "john doe",
+        "password": "$2b$12$FoSpMjXcLa9zUO2cryGM4O4mzbcpHiuxaJ7yAIb9g3yUyGbhxOEha",
+        "portfolio": []
     }
 }

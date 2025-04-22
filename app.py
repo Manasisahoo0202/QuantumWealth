@@ -10,9 +10,10 @@ from datetime import datetime, timedelta
 import json
 import numpy as np
 import sys
+import time
 
 # Import utils
-from utils.auth import initialize_session_state, register_user, login_user, check_login
+from utils.auth import initialize_session_state, register_user, login_user, check_login, get_session_time
 from utils.portfolio import (
     add_to_portfolio, 
     remove_from_portfolio, 
@@ -299,3 +300,30 @@ elif st.session_state.page == "optimization":
     show_optimization()
 else:
     show_welcome()
+    
+# Add footer with session time
+if st.session_state.logged_in:
+    st.markdown("<br>", unsafe_allow_html=True)
+    minutes, seconds = get_session_time()
+    footer_container = st.container()
+    with footer_container:
+        st.markdown(f"""
+        <div class="footer">
+            <p>QuantumWealth uses QPSO algorithm to analyze historical market data and provide investment recommendations. 
+        Past performance is not indicative of future results. Investment involves risk.</p>
+            Current session time: {minutes} minute{'s' if minutes != 1 else ''} and {seconds} second{'s' if seconds != 1 else ''}
+            <br>
+            © 2025 QuantumWealth - NSE Portfolio Optimizer
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Auto-refresh every 5 seconds to keep the session time updated
+    st.markdown("""
+    <script>
+        // Auto-refresh the page every 5 seconds to update session time
+        setTimeout(function(){
+            window.location.reload();
+        }, 5000);
+    </script>
+    """, unsafe_allow_html=True)
+

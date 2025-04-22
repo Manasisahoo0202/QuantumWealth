@@ -10,10 +10,7 @@ from passlib.context import CryptContext
 import json
 import os
 import sys
-import numpy as np
-import pandas as pd
 import yfinance as yf
-from datetime import datetime, timedelta
 
 
 # For QPSO algorithm, importing from the existing utils

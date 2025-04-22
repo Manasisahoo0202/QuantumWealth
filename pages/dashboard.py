@@ -13,6 +13,28 @@ def show_dashboard():
     st.markdown(
         f'<h1 class="main-header">Welcome, {st.session_state.username}!</h1>',
         unsafe_allow_html=True)
+        
+    # Add Settings expander at the top
+    with st.expander("Account Settings"):
+        with st.form("change_password_form"):
+            st.subheader("Change Password")
+            current_password = st.text_input("Current Password", type="password")
+            new_password = st.text_input("New Password", type="password")
+            confirm_password = st.text_input("Confirm New Password", type="password")
+            
+            if st.form_submit_button("Change Password"):
+                if not current_password or not new_password or not confirm_password:
+                    st.error("Please fill in all password fields")
+                elif new_password != confirm_password:
+                    st.error("New passwords do not match")
+                elif len(new_password) < 6:
+                    st.error("New password must be at least 6 characters")
+                else:
+                    from utils.auth import change_password
+                    if change_password(st.session_state.username, current_password, new_password):
+                        st.success("Password changed successfully!")
+                    else:
+                        st.error("Current password is incorrect")
 
     # Portfolio summary, editor, and performance in different tabs
     tab1, tab2, tab3 = st.tabs(
