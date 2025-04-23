@@ -98,7 +98,7 @@ def show_welcome():
     # Footer
     st.markdown("""
         <div class="footer">
-            <p>QuantumWealth uses advanced algorithms to analyze historical market data and provide investment recommendations. 
+            <p>QuantumWealth uses QPSO algorithm to analyze historical market data and provide investment recommendations. 
             Past performance is not indicative of future results. Investment involves risk.</p>
             <p style="margin-top: 20px;">© 2025 QuantumWealth. All rights reserved.</p>
         </div>

@@ -14,27 +14,39 @@ def show_dashboard():
         f'<h1 class="main-header">Welcome, {st.session_state.username}!</h1>',
         unsafe_allow_html=True)
         
+    # Check if the user needs to update their password
+    from utils.auth import _load_users
+    users = _load_users()
+    if users.get(st.session_state.username, {}).get("needs_password_update", False):
+        st.warning("Your password does not meet our security requirements. Please update it in Account Settings below.")
+
     # Add Settings expander at the top
     with st.expander("Account Settings"):
         with st.form("change_password_form"):
             st.subheader("Change Password")
-            current_password = st.text_input("Current Password", type="password")
+            current_password = st.text_input("Current Password",
+                                             type="password")
             new_password = st.text_input("New Password", type="password")
-            confirm_password = st.text_input("Confirm New Password", type="password")
-            
+            confirm_password = st.text_input("Confirm New Password",
+                                             type="password")
+
             if st.form_submit_button("Change Password"):
                 if not current_password or not new_password or not confirm_password:
                     st.error("Please fill in all password fields")
                 elif new_password != confirm_password:
                     st.error("New passwords do not match")
-                elif len(new_password) < 6:
-                    st.error("New password must be at least 6 characters")
                 else:
-                    from utils.auth import change_password
-                    if change_password(st.session_state.username, current_password, new_password):
-                        st.success("Password changed successfully!")
+                    from utils.auth import change_password, validate_password
+                    # Use the same validation function as registration
+                    is_valid, message = validate_password(new_password)
+                    if not is_valid:
+                        st.error(message)
                     else:
-                        st.error("Current password is incorrect")
+                        if change_password(st.session_state.username,
+                                           current_password, new_password):
+                            st.success("Password changed successfully!")
+                        else:
+                            st.error("Current password is incorrect")
 
     # Portfolio summary, editor, and performance in different tabs
     tab1, tab2, tab3 = st.tabs(
@@ -157,22 +169,21 @@ def show_portfolio_editor():
             # Load all NSE symbols for dropdown
             from utils.stock_data import load_nse_symbols
             nse_symbols_dict = load_nse_symbols()
-            
+
             # Format options for the dropdown
             stock_options = []
             for symbol, company in nse_symbols_dict.items():
                 stock_options.append(f"{symbol} - {company}")
-            
+
             # Create a searchable dropdown for stocks
             selected_stock = st.selectbox(
                 "Search and Select NSE Stock",
                 options=stock_options,
-                help="Type to search for stocks by name or symbol"
-            )
-            
+                help="Type to search for stocks by name or symbol")
+
             # Extract ticker from selection
             ticker = selected_stock.split(" - ")[0] if selected_stock else ""
-            
+
             shares = st.number_input("Number of Shares",
                                      min_value=0.01,
                                      step=0.01)
@@ -185,8 +196,7 @@ def show_portfolio_editor():
             if add_submitted:
                 if ticker and shares > 0 and purchase_price > 0:
                     # Validate ticker
-                    valid_tickers, invalid_tickers = validate_tickers(
-                        [ticker])
+                    valid_tickers, invalid_tickers = validate_tickers([ticker])
 
                     if ticker in valid_tickers:
                         # Add to portfolio
